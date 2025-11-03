@@ -1,0 +1,23 @@
+#name ,#password ,#cpassword
+{
+    background-color: chartreuse;
+}
+
+body
+{
+    background-color: blue;
+    text-align: center;
+    padding-right: 50%;
+}
+
+.blue
+{
+    background-color: blue;
+}
+fieldset {
+    background-color: white;
+  border: 2px solid black;
+  padding: 20px;
+  width: 30%;
+  margin: auto;
+}

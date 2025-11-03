@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    First Name<input type="text" id="First">
+    <br> <br>
+    Last Name<input type="text" id="Last">
+    <br> <br>
+    <input type="submit" value="Click Here" onclick="first_name()"> 
+    <br> <br>
+    <input type="text" id="res" >
+
+
+    <script>
+        function first_name ()
+        {
+        let first_name =  document.getElementById("First").value
+
+        let last_name = document.getElementById("Last").value
+
+
+        let reversed_last_name = last_name.split("").reverse().join("")
+        document.getElementById("res").value = first_name + " " + reversed_last_name;
+        }
+    </script>
+</body>
+</html>

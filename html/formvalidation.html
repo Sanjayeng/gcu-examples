@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validatePhone()">
+        <input type="text" id="phone" placeholder="Enter your phone number" onkeyup="validatePhone()">
+        <input type="text" id="name" placeholder="Enter your Name" onkeyup="validateName()">
+        <input type="email" id="email" placeholder="Enter your email">
+        <input type="submit" value="Submit">
+        </form>
+
+
+        
+
+        <script>
+            function validatePhone () {
+
+            
+            
+               obj_phno =document.getElementById('phone');
+               phno = obj_phno.value;
+               obj_phno.style.borderWidth = "6px";
+
+                const regex = /^[6-9][0-9]{9}$/;
+                if(regex.test(phno))
+                {
+                   obj_phno.style.borderColor = "green";
+                 
+                }
+                else
+                {
+                    obj_phno.style.borderColor = "red";
+                
+                }
+            }
+
+
+             function validateName() {
+
+            
+            
+               obj_phno =document.getElementById('name');
+               phno = obj_phno.value;
+               obj_phno.style.borderWidth = "6px";
+
+                // const regex = /^[6-9][0-9]{9}$/;
+                const regexname = /^[A-Z][a-zA-Z\s]{2,15}$/;
+                if(regexname.test(phno))
+                {
+                   obj_phno.style.borderColor = "green";
+                 
+                }
+                else
+                {
+                    obj_phno.style.borderColor = "red";
+                
+                }
+            }
+
+
+            function validateEmail() {
+                obj_email = document.getElementById('email');
+        </script>
+</body>
+</html>

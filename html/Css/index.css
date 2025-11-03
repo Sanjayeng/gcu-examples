@@ -1,0 +1,23 @@
+  #h21{
+            color: blue;
+        }
+        #h22{
+            color: green;
+        }
+        #h23{
+            color: red;
+        }
+
+        .c1{
+            color: blue;
+            font-size: 30px;
+        }
+        .c2{
+            color: green;
+            font-size: 40px;
+        }
+        .c3{
+            color: red;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+ 

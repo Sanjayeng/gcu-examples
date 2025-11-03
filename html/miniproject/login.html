@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e9ecef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-form {
+      background-color: #fff;
+      padding: 25px 35px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      width: 320px;
+    }
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #333;
+    }
+    .login-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #555;
+    }
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    .login-form input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .login-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <form action="index.html" class="login-form"  method="POST">
+    <h2>Login</h2>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required />
+
+    <input type="submit" id="submit" value="Login Now" onclick="login(event)">
+
+    <script>
+    
+    function validatelogin(event) {
+        event.preventDefault();
+
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        localStorage.getItem("email", email);
+        localStorage.getItem("password", password);
+
+
+        if (enteredemail    === storedEmail && enteredpassword === storedPassword) {
+          alert("Login successful");
+            window.location.href = "index.html";
+            return true;
+        }
+        else {
+          alert("Invalid email or password");
+          if(confirm("Do you want to create an account?")) {
+            window.location.href = "registration.html";
+          }
+          return false;
+        }
+      
+      }
+    </script>
+
+  </form>
+</body>
+</html>

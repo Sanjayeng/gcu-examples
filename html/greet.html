@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greet</title>
+</head>
+<body>
+   Name : <input type="text" id="inputfield">
+   <br>
+   <br>
+   <input type="submit" value="Greet" onclick="greet ()"> 
+   <br>
+   <br>
+   <h1 id="greet"> </h1>
+   <script>
+
+    function greet() {
+       let userinput = document.getElementById("inputfield").value;
+       document.getElementById("greet").innerText = 'Welcome ' + "" +userinput;
+    
+    }
+   </script>
+</body>
+</html>

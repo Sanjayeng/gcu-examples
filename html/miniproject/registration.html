@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .registration-form {
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    .registration-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .registration-form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .registration-form input[type="text"],
+    .registration-form input[type="email"],
+    .registration-form input[type="tel"],
+    .registration-form input[type="password"] {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .registration-form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #357edd;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .registration-form button:hover {
+      background-color: #2a63bf;
+    }
+  </style>
+</head>
+<body>
+  <form  action="login.html" class="registration-form"  method="POST">
+    <h2>Register</h2>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required />
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required />
+
+    <label for="confirm-password">Confirm Password</label>
+    <input type="password" id="confirm-password" name="confirm-password" required />
+
+    <input type="submit" id="submit" value="Register Now" onclick="register(event)">
+  </form>
+
+  <script>
+    function register (event) {
+        event.preventDefault();
+
+       const name = document.getElementById('name').value;
+       const email = document.getElementById('email').value;
+       const phone = document.getElementById('phone').value;
+       const password = document.getElementById('password').value;
+       const cpassword = document.getElementById('confirm-password').value;
+
+       
+        if (password !== cpassword ) {
+            
+    
+            alert("password not matched");
+            return ;
+        }
+        
+        
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+        localStorage.setItem("phone", phone);
+        localStorage.setItem("password", password);
+
+        alert("Registration successful");
+    }
+  </script>
+</body>
+</html>
